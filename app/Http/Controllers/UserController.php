@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -233,6 +234,7 @@ class UserController extends Controller
                     'name' => $request->name,
                     'email' => $request->email,
                     'profile_image' => $user->profile_image,
+                    'whatsapp' => $request->whatsapp,
                     'jenis_kelamin' => $request->jenis_kelamin,
                     'tanggal_lahir' => $request->tanggal_lahir,
                     'tinggal_dimana' => $request->tinggal_dimana,

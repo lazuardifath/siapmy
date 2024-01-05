@@ -22,7 +22,6 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $data = $user->name;
-        Log::debug($data);
         session(['profileComplete' => $user->profile_complete]);
         return view('suit.dashboard', compact('data'));
     }

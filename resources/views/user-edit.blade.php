@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-md-12 col-lg-12"> <strong>WhatsApp</strong>
                                 <br>
-                                <p class="text-muted">-</p>
+                                <p class="text-muted">{{ $user->whatsapp }}</p>
                             </div>
                             <div class="col-md-12 col-lg-12"> <strong>Umur</strong>
                                 <br>
@@ -93,6 +93,20 @@
                                         <div class="help-block with-errors"></div>
 
                                         @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="whatsapp">{{ __('WhatsApp Number') }}<span class="text-red">*</span></label>
+                                        <input id="whatsapp" type="number"
+                                            class="form-control @error('whatsapp') is-invalid @enderror" name="whatsapp"
+                                            value="{{ clean($user->whatsapp, 'No. WhatsApp') }}" required>
+                                        <div class="help-block with-errors"></div>
+
+                                        @error('whatsapp')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

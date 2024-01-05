@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('whatsapp')->after('profile_image')->nullable();
-            $table->dropColumn(['comment_count', 'view_count']);
+            $table->dropColumn(['question1', 'question2', 'question3', 'question4']);
         });
     }
 

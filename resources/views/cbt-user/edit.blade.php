@@ -21,7 +21,7 @@
                     <div class="card-body px-4 table-border-style">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-6 offset-md-3">
+                                <div class="col-lg-12">
                                     <h1>Ajukan Sesi CBT</h1>
 
                                     <form action="{{ route('start-cbt.update', $sesi->id) }}" method="POST">
@@ -29,7 +29,7 @@
                                         @method('PUT')
                                         <div class="mb-3">
                                             <label for="keluhan" class="form-label">Keluhan</label>
-                                            <input type="text" class="form-control" id="keluhan" name="keluhan" value="{{ $sesi->keluhan }}">
+                                            <textarea class="form-control html-editor" id="summernote" name="keluhan" rows="14">{{ $sesi->keluhan }}</textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label for="status" class="form-label">Status</label>
@@ -69,5 +69,12 @@
     </div>
     <!-- push external js -->
     @push('script')
+    <script src="{{ asset('plugins/select2/dist/js/select2.min.js') }}"></script>
+        <script src="{{ asset('plugins/summernote/dist/summernote-bs4.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
+        <script src="{{ asset('plugins/jquery.repeater/jquery.repeater.min.js') }}"></script>
+        <script src="{{ asset('plugins/mohithg-switchery/dist/switchery.min.js') }}"></script>
+        <script src="{{ asset('js/form-advanced.js') }}"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
     @endpush
 @endsection

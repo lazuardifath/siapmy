@@ -169,17 +169,6 @@
 
             ],
             buttons: [
-                {
-                    extend: 'pdf',
-                    className: 'btn-sm btn-primary',
-                    title: 'Users',
-                    pageSize: 'A4',
-                    header: false,
-                    footer: true,
-                    exportOptions: {
-                        // columns: ':visible'
-                    }
-                },
             ],
             initComplete: function () {
                 var api =  this.api();

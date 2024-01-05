@@ -23,11 +23,11 @@
                     <div class="card-body px-4 table-border-style">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-6 offset-md-3">
+                                <div class="col-lg-12">
                                     <h1>Ajukan Sesi CBT</h1>
                                         <div class="mb-3">
                                             <label for="keluhan" class="form-label">Keluhan</label>
-                                            <input type="text" class="form-control" id="keluhan" name="keluhan">
+                                            <textarea class="form-control html-editor" id="keluhan" name="keluhan" rows="10"></textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label for="status" class="form-label">Status</label>
@@ -67,5 +67,8 @@
     </div>
     <!-- push external js -->
     @push('script')
+        <script src="{{ asset('plugins/select2/dist/js/select2.min.js') }}"></script>
+        <script src="{{ asset('plugins/summernote/dist/summernote-bs4.min.js') }}"></script>
+        <script src="{{ asset('js/form-advanced.js') }}"></script>
     @endpush
 @endsection

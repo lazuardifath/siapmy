@@ -89,8 +89,8 @@
                                             <div class="col">
                                                 <h6 class="mb-4"><b>Buku Kerja Pasien</b></h6>
                                                 <p>Alat atau sumber daya yang digunakan dalam bidang kesehatan mental untuk membantu individu yang menderita masalah harga diri rendah.</p>
-                                                <button type="button" class="btn btn-info m-1"><i
-                                                        class="ik ik-play-circle"></i>Lihat Buku Kerja</button>
+                                                <a type="button" href="" class="btn btn-info p-1 m-1 disabled readonly"><i
+                                                    class="ik ik-play-circle"></i>Lihat Buku Kerja</a> <span class="font-italic">Coming Soon!</span>
                                             </div>
                                         </div>
                                     </div>
